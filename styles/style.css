@@ -2,4 +2,342 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-image: var(--background-image);
+  background-color: var(--color-background);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.header{
+  height: 100vh;
+  min-height: 668px;
+  display: grid;
+  padding: var(--padding-small);
+  grid-template-rows: 1fr max-content 1fr;
+}
+
+.decorated-zone::before{
+  position: absolute;
+  content: '';
+  border-bottom: 1px solid var(--color-text);
+  border-left: 1px solid var(--color-text);
+  width: 25px;
+  height: 25px;
+  bottom: var(--padding-small);
+  left: var(--padding-small);
+}
+
+.decorated-zone::after{
+  position: absolute;
+  content: '';
+  border-top: 1px solid var(--color-text);
+  border-right: 1px solid var(--color-text);
+  width: 25px;
+  height: 25px;
+  top: var(--padding-small);
+  right: var(--padding-small);
+}
+
+.rec{
+  display: var(--rec_display);
+  position: absolute;
+  color: var(--color-text);
+  font-size: 18px;
+  font-family: var(--font-main-family);
+  line-height: 25px;
+  font-weight: 400;
+  text-transform: uppercase;
+  top: var(--padding-small);
+  right: calc(var(--padding-small) + 9px);
+}
+
+.rec::after{
+  content: '';
+  inline-size: 9px;
+  block-size: 9px;
+  border-radius: 50%;
+  background: var(--color-text);
+  box-shadow: 0 0 4px 2px var(--color-text);
+  display: inline-block;
+  margin-left: 10px;
+
+}
+
+.header__theme-menu{
+  justify-self: end;
+  align-self: center;
+}
+
+.header__theme-menu-list{
+  display: grid;
+  gap: 10px;
+  color: var(--color-text);
+  font-size: 18px;
+  font-family: var(--font-main-family);
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.header__theme-menu-button{
+  background-color: transparent;
+  border: 1px solid transparent;
+  text-transform: lowercase;
+  padding: 0px 13px;
+  min-height: 26px;
+  cursor: pointer;
+}
+
+
+.header__theme-menu-button:hover{
+  border: 1px solid var(--button-hover-color);
+}
+
+
+.header__theme-menu-button:focus{
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible{
+  outline: none;
+  border-bottom: 1px solid var(--color-text);
+}
+
+.header__theme-menu-button_active{
+  border: 1px solid var(--color-text);
+  pointer-events: none;
+}
+
+.header__title{
+  justify-self: center;
+  align-self: center;
+}
+
+.font_main{
+  font-family: var(--font-main-family);
+  font-size: var(--font-main-size);
+  text-shadow: 4px 4px 0 var(--color-accent);
+  color: var(--color-logo);
+  line-height: 83%;
+}
+
+.header__paragraph{
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 23.4px;
+  font-family: var(--font-main-family);  
+  color: var(--color-accent-text);
+  align-self: center;
+  justify-self: center;
+}
+
+.title-decor{
+  background-color: var(--color-accent);
+}
+
+.main {
+  padding: 0px var(--padding-small);
+}
+
+.main__section-title{
+  color: var(--color-text);
+  margin-bottom: var(--padding-medium);
+  font-size: 18px;
+  font-family: var(--font-main-family);
+  line-height: 23.4px;
+  font-weight: 700;
+}
+
+.main__section-list-item:not(:last-child){
+  margin-bottom: var(--padding-medium);
+}
+
+.main__section-list-article-title{
+  font-size: 18px;
+  font-family: var(--font-main-family);
+  line-height: 23.4px;
+  font-weight: 700;
+}
+
+.main__section-list-article-text{
+  color: var(--color-section-text);
+  font-family: var(--font-main-family);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23.4px;
+  margin-top: var(--padding-small);
+}
+
+.main__section-what,
+.main__section-how,
+.main__section-pictures{
+  margin-top: var(--padding-large);
+}
+
+.main__section-list-article-subtitle{
+  color: var(--color-accent-text);
+  font-family: var(--font-main-family);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.4px;
+  margin-top: var(--padding-medium);
+}
+
+.link{
+  text-shadow: 2px 2px 0px var(--color-accent);
+  text-decoration: none;
+}
+
+
+.link {
+  text-shadow: 2px 2px 0px var(--color-accent);
+  text-decoration: none;
+}
+
+.link:hover {
+  border-bottom: 1px solid currentColor;
+}
+
+.link:focus {
+  outline: none;
+}
+
+.link:focus-visible {
+  outline: none;
+  border: 1px solid currentColor;
+}
+
+
+.main__section-pictures__gallery{
+  display: grid;
+  gap: var(--padding-small);
+  margin-top: var(--padding-small);
+}
+
+.main__section-pictures__image{
+  object-position: center;
+  object-fit: cover;
+  width: 100%;
+}
+
+.footer{
+  height: 100vh;
+  min-height: 667px;
+  padding: var(--padding-small);
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+@media (768px <= width) {
+
+  :root {
+      --padding-large: 80px;
+      
+  --font-main-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header{
+  padding: var(--padding-medium);
+  }
+
+  
+.header__title{
+  justify-self: start;
+    margin-left: calc((-1) * var(--padding-medium));
+}
+
+  .header__paragraph{
+    justify-self: end;
+    max-width: 50%;
+  }
+
+  
+.decorated-zone::before{
+  bottom: var(--padding-medium);
+  left: var(--padding-medium);
+}
+
+.decorated-zone::after{
+  top: var(--padding-medium);
+  right: var(--padding-medium);
+  }
+
+  .rec{
+  top: var(--padding-medium);
+  right: calc(var(--padding-medium) + 9px);
+}
+
+  .main {
+    padding: 0px var(--padding-medium);
+  }
+
+.main__section-why,
+.main__section-how{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--padding-medium);
+}
+
+.main__section-pictures__gallery{
+  display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, min-content);
+    gap: var(--padding-medium);
+    grid-template-areas:
+      "sunset sunset icecream"
+      "tape books icecream"
+      "tape street street";
+}
+
+  
+  .gallery_sunset{
+    grid-area: sunset;
+  }
+
+  .gallery_icecream{
+    grid-area: icecream;
+    height: 100%;
+  }
+
+  .gallery_tape{
+    grid-area: tape;
+    height: 100%;
+  }
+
+  .gallery_books{
+    grid-area: books;
+
+  }
+
+  .gallery_street{
+    grid-area: street;
+  }
+
+  .main__section-what .main__section-title {
+    max-width: calc((100% / 3) - var(--padding-medium));;
+  }
+}
+
+
+@media (1024px <= width) {
+
+
+  .main__section-what .main__section-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--padding-medium);
+  }
+
+  .header__theme-menu{
+    justify-self: center;
+    align-self: start;
+
+  }
+
+  .header__theme-menu-list{
+    grid-template-columns: repeat(3, max-content);
+  }
 }

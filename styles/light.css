@@ -9,4 +9,40 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --background-image: url(../images/cover-image-light.png); /*фоновое изображение*/
+  --color-background: #fff1f7; /*цвет фона под изображением*/
+  --color-logo: #ffc2e6; /*цвет заголовка в шапке и футере*/
+  --color-text: #353430; /*яркий цвет - заголовки, ссылки*/
+  --color-section-text: #353430; /*цвет текста*/
+  --color-accent: #ff8dcb; /*цвет акцентрный для фона*/
+  --color-accent-text: #353430; /*цвет акцентный для текста*/
+  --button-hover-color: rgba(
+    50,
+    49,
+    45,
+    0.4
+  ); /*цвет обводки кнопок в режиме hover*/
+  --rec_display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    /* Дублируем только те же переменные, что и выше */
+    --background-image: url(../images/cover-image-light.png); /*фоновое изображение*/
+    --color-background: #fff1f7; /*цвет фона под изображением*/
+    --color-logo: #ffc2e6; /*цвет заголовка в шапке и футере*/
+    --color-text: #353430; /*яркий цвет - заголовки, ссылки*/
+    --color-section-text: #353430; /*цвет текста*/
+    --color-accent: #ff8dcb; /*цвет акцентрный для фона*/
+    --color-accent-text: #353430; /*цвет акцентный для текста*/
+    --button-hover-color: rgba(
+    50,
+    49,
+    45,
+    0.4
+    ); /*цвет обводки кнопок в режиме hover*/
+    --rec_display: none;
+  }
+
+  /* Остальные стили, только при необходимости */
 }
