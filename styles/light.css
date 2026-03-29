@@ -36,10 +36,10 @@
     --color-accent: #ff8dcb; /*цвет акцентрный для фона*/
     --color-accent-text: #353430; /*цвет акцентный для текста*/
     --button-hover-color: rgba(
-    50,
-    49,
-    45,
-    0.4
+      50,
+      49,
+      45,
+      0.4
     ); /*цвет обводки кнопок в режиме hover*/
     --rec_display: none;
   }
