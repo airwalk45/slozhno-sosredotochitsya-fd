@@ -136,6 +136,11 @@
   padding: 0px var(--padding-small);
 }
 
+.main__section-why,
+.footer {
+  margin-top: calc(var(--padding-large) - var(--padding-small));
+}
+
 .main__section-title {
   margin-bottom: var(--padding-medium);
   color: var(--color-text);
@@ -179,11 +184,6 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 23.4px;
-}
-
-.link {
-  text-decoration: none;
-  text-shadow: 2px 2px 0px var(--color-accent);
 }
 
 .link {

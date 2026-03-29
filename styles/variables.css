@@ -5,34 +5,26 @@
 
 :root {
   --background-image: url(../images/cover-image-dark.png); /*фоновое изображение*/
-
   --font-main-family: "IBM Plex Mono", monospace; /*семейство шрифтов*/
   --font-main-size: clamp(
     7.25rem,
     7.0115rem + 1.0178vw,
     7.5rem
   ); /*размер заголовка в шапке*/
-
   --color-background: #000028; /*цвет фона под изображением*/
-
   --color-logo: #db00ff; /*цвет заголовка в шапке и футере*/
-
   --color-text: #ff0070; /*яркий цвет - заголовки, ссылки*/
   --color-section-text: #f1b2ce; /*цвет текста*/
-
   --color-accent: #ff0070; /*цвет акцентрный для фона под текстом*/
   --color-accent-text: #000028; /*цвет акцентный для текста без фона*/
-
   --button-hover-color: rgba(
     255,
     0,
     112,
     0.4
   ); /*цвет обводки кнопок в режиме hover*/
-
   --padding-small: 10px;
   --padding-medium: 20px;
   --padding-large: 50px;
-
   --rec_display: block;
 }
