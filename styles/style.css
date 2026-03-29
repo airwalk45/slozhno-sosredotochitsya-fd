@@ -226,6 +226,7 @@
   padding: var(--padding-small);
 }
 
+/*==============================768px <= width=====================================================*/
 @media (768px <= width) {
   :root {
     --padding-large: 80px;
@@ -282,6 +283,12 @@
       "tape books icecream"
       "tape street street";
     gap: var(--padding-medium);
+    margin-top: var(--padding-medium);
+  }
+
+  .main__section-why,
+  .footer {
+    margin-top: calc(var(--padding-large) - var(--padding-medium));
   }
 
   .gallery_sunset {
@@ -311,6 +318,7 @@
   }
 }
 
+/*==============================1024px <= width=====================================================*/
 @media (1024px <= width) {
   .main__section-what .main__section-list {
     display: grid;
