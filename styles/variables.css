@@ -28,3 +28,10 @@
   --padding-large: 50px;
   --rec_display: block;
 }
+
+@media (768px <= width) {
+  :root {
+    --padding-large: 80px;
+    --font-main-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+}

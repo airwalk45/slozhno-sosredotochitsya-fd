@@ -136,7 +136,7 @@
   padding: 0px var(--padding-small);
 }
 
-.main__section-why,
+.section-why,
 .footer {
   margin-top: calc(var(--padding-large) - var(--padding-small));
 }
@@ -155,6 +155,7 @@
 }
 
 .main__section-list-article-title {
+  color: var(--color-accent-text);
   font-family: var(--font-main-family);
   font-weight: 700;
   font-size: 18px;
@@ -171,19 +172,13 @@
   line-height: 23.4px;
 }
 
-.main__section-what,
-.main__section-how,
-.main__section-pictures {
+.section {
   margin-top: var(--padding-large);
 }
 
-.main__section-list-article-subtitle {
+.subtitle {
   margin-top: var(--padding-medium);
-  color: var(--color-accent-text);
-  font-family: var(--font-main-family);
   font-weight: 400;
-  font-size: 18px;
-  line-height: 23.4px;
 }
 
 .link {
@@ -228,11 +223,6 @@
 
 /*==============================768px <= width=====================================================*/
 @media (768px <= width) {
-  :root {
-    --padding-large: 80px;
-
-    --font-main-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  }
 
   .header {
     padding: var(--padding-medium);
@@ -267,8 +257,8 @@
     padding: 0px var(--padding-medium);
   }
 
-  .main__section-why,
-  .main__section-how {
+  .section-why,
+  .section-how {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: var(--padding-medium);
@@ -286,7 +276,7 @@
     margin-top: var(--padding-medium);
   }
 
-  .main__section-why,
+  .section-why,
   .footer {
     margin-top: calc(var(--padding-large) - var(--padding-medium));
   }
@@ -313,14 +303,14 @@
     grid-area: street;
   }
 
-  .main__section-what .main__section-title {
+  .section-what .main__section-title {
     max-width: calc((100% / 3) - var(--padding-medium));
   }
 }
 
 /*==============================1024px <= width=====================================================*/
 @media (1024px <= width) {
-  .main__section-what .main__section-list {
+  .section-what .main__section-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--padding-medium);
